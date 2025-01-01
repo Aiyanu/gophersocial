@@ -1,4 +1,4 @@
-module example.com/gophersocial
+module github.com/gophersocial
 
 go 1.23.3
 
