@@ -1,0 +1,7 @@
+.env
+go.sum
+/vendor/
+/bin/
+/pkg/
+*.log
+*.tmp
