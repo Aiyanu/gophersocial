@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"example.com/gophersocial/internal/store"
 	"github.com/go-chi/chi/v5"
+	"github.com/gophersocial/internal/store"
 )
 
 type postKey string
@@ -32,15 +32,6 @@ func (app *application) createPostHandler(w http.ResponseWriter, r *http.Request
 		app.badRequestError(w, r, err)
 		return
 	}
-
-	// if payloads.Content == "" {
-	// 	app.badRequestError(w, r, fmt.Errorf("content required"))
-	// }
-	// if payloads.Title == "" {
-	// 	app.badRequestError(w, r, fmt.Errorf("title required"))
-	// }
-
-	// userId := 1
 
 	post := &store.Post{
 		Title:   payloads.Title,

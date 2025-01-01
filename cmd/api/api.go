@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
-	"example.com/gophersocial/internal/store"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/gophersocial/internal/store"
 )
 
 // application depencies are stored here

@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"example.com/gophersocial/internal/db"
-	"example.com/gophersocial/internal/env"
-	"example.com/gophersocial/internal/store"
+	"github.com/gophersocial/internal/db"
+	"github.com/gophersocial/internal/env"
+	"github.com/gophersocial/internal/store"
 )
 
 func main() {

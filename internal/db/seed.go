@@ -7,7 +7,7 @@ import (
 
 	"math/rand"
 
-	"example.com/gophersocial/internal/store"
+	"github.com/gophersocial/internal/store"
 )
 
 var usernames = []string{
@@ -110,7 +110,7 @@ func generateUsers(num int) []*store.User {
 	for i := 0; i < num; i++ {
 		users[i] = &store.User{
 			Username: usernames[i%len(usernames)] + fmt.Sprintf("%d", i),
-			Email:    usernames[i%len(usernames)] + fmt.Sprintf("%d", i) + "@example.com",
+			Email:    usernames[i%len(usernames)] + fmt.Sprintf("%d", i) + "@github.com",
 		}
 	}
 
