@@ -3,13 +3,31 @@ package main
 import (
 	"log"
 
-	"github.com/gophersocial/internal/db"
-	"github.com/gophersocial/internal/env"
-	"github.com/gophersocial/internal/store"
+	"github.com/Aiyanu/gophersocial/internal/db"
+	"github.com/Aiyanu/gophersocial/internal/env"
+	"github.com/Aiyanu/gophersocial/internal/store"
 	"github.com/joho/godotenv"
 )
 
 const version = "0.0.1"
+
+//	@title			GopherSocial API
+//	@description	API for GopherSocial, a social network for gohpers
+//	@termsOfService	http://swagger.io/terms/
+
+//	@contact.name	API Support
+//	@contact.url	http://www.swagger.io/support
+//	@contact.email	support@swagger.io
+
+//	@license.name	Apache 2.0
+//	@license.url	http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @BasePath					/v1
+//
+// @securityDefinitions.apikey	ApiKeyAuth
+// @in							header
+// @name						Authorization
+// @description
 
 func main() {
 	// Load environment variables first so we can use them for configuration
@@ -21,9 +39,9 @@ func main() {
 
 	// Create the configuration with the correct Windows host IP
 	cfg := config{
-		addr: env.GetString("ADDR", ":8080"),
+		addr:   env.GetString("ADDR", ":8080"),
+		apiURL: env.GetString("EXTERNAL_URL", "http://localhost:8080"),
 		db: dbConfig{
-			// Replace YOUR_WINDOWS_IP with the IP from the nameserver command
 			addr:         env.GetString("DB_ADDR", "postgres://aiyanu:incorrect@localhost/social?sslmode=disable"),
 			maxOpenConns: env.GetInt("DB_MAX_OPEN_CONNS", 30),
 			maxIdleConns: env.GetInt("DB_MAX_IDLE_CONNS", 30),

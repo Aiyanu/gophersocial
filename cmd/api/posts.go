@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/Aiyanu/gophersocial/internal/store"
 	"github.com/go-chi/chi/v5"
-	"github.com/gophersocial/internal/store"
 )
 
 type postKey string
