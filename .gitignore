@@ -5,3 +5,4 @@ go.sum
 /pkg/
 *.log
 *.tmp
+/test
